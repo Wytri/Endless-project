@@ -1,2 +1,2 @@
-# Endless-project
-proyecto del programa de videojuegos de endless
+# Platformer2D
+Juego Platformer 2D
