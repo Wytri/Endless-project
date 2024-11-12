@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://baqms20qie0gm"]
+[gd_scene load_steps=15 format=3 uid="uid://baqms20qie0gm"]
 
 [ext_resource type="Script" path="res://scenes/game/levels/rooms/scene_1/scene_1.gd" id="1_cf5ar"]
 [ext_resource type="TileSet" uid="uid://bx1rsqucrwm2i" path="res://assets/resources/bg_tile_set.tres" id="1_mv2rp"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://glchvmmfffqa" path="res://scenes/game/levels/areas/bomb_shop/bomb_shop.tscn" id="9_404n3"]
 [ext_resource type="PackedScene" uid="uid://dl8afnvp5w315" path="res://scenes/game/levels/objects/power_up/power_up.tscn" id="13_hfjeu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbg2b"]
+size = Vector2(66, 35)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cf5ar")
 
@@ -25,6 +28,10 @@ bus = &"Ambient"
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="AreaNextLevel" type="Area2D" parent="Areas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaNextLevel"]
+position = Vector2(300, 123)
+shape = SubResource("RectangleShape2D_vbg2b")
 
 [node name="Death" parent="Areas" instance=ExtResource("3_ry07u")]
 position = Vector2(172, 304)
