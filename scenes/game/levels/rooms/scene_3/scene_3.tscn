@@ -1,131 +1,114 @@
-[gd_scene load_steps=19 format=3 uid="uid://baqms20qie0gm"]
+[gd_scene load_steps=15 format=3 uid="uid://baqms20qie0gm"]
 
-[ext_resource type="Script" path="res://scenes/game/levels/rooms/scene_1/scene_1.gd" id="1_3ui7n"]
-[ext_resource type="AudioStream" uid="uid://btstmivulu2by" path="res://assets/sounds/pirate_game_tune.ogg" id="2_14daw"]
-[ext_resource type="Shader" path="res://scenes/game/levels/rooms/scene_1/scene_1.gdshader" id="3_ncgnr"]
-[ext_resource type="Texture2D" uid="uid://cg6wkkuni8aq8" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/bg_image.png" id="4_m1q2k"]
-[ext_resource type="Texture2D" uid="uid://c8apilaqosli4" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/additional_sky.png" id="5_2pxlk"]
-[ext_resource type="PackedScene" uid="uid://deedu63sld0es" path="res://scenes/game/levels/objects/death/death.tscn" id="9_cywga"]
-[ext_resource type="PackedScene" uid="uid://brhmupxo2xjim" path="res://scenes/game/levels/objects/change_scene/door_change_scene.tscn" id="14_s551m"]
-[ext_resource type="PackedScene" uid="uid://b5qjvfbte4svk" path="res://scenes/game/levels/objects/pickable_object/pickable_object.tscn" id="16_kb8cx"]
-[ext_resource type="PackedScene" uid="uid://c36rtvjb7r5d1" path="res://scenes/game/levels/objects/red_potion/red_potion.tscn" id="17_kilh1"]
-[ext_resource type="PackedScene" uid="uid://bo37g7mv4j6pn" path="res://scenes/game/enemy/crabby.tscn" id="18_530q5"]
-[ext_resource type="PackedScene" uid="uid://bnp6y3fe4kqob" path="res://scenes/game/levels/objects/damage_object/cannon/cannon.tscn" id="19_jyw11"]
-[ext_resource type="PackedScene" uid="uid://glchvmmfffqa" path="res://scenes/game/levels/areas/bomb_shop/bomb_shop.tscn" id="20_nk4sv"]
-[ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="21_ns83h"]
-[ext_resource type="TileSet" uid="uid://bx1rsqucrwm2i" path="res://assets/resources/bg_tile_set.tres" id="22_1o43r"]
-[ext_resource type="PackedScene" uid="uid://8rbt5lmdrp0s" path="res://scenes/game/camera/camera.tscn" id="23_yl0mr"]
-[ext_resource type="PackedScene" uid="uid://dl8afnvp5w315" path="res://scenes/game/levels/objects/power_up/power_up.tscn" id="24_6d5ph"]
+[ext_resource type="Script" path="res://scenes/game/levels/rooms/scene_1/scene_1.gd" id="1_cf5ar"]
+[ext_resource type="TileSet" uid="uid://bx1rsqucrwm2i" path="res://assets/resources/bg_tile_set.tres" id="1_mv2rp"]
+[ext_resource type="AudioStream" uid="uid://btstmivulu2by" path="res://assets/sounds/pirate_game_tune.ogg" id="2_arf1a"]
+[ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="2_e4qjl"]
+[ext_resource type="PackedScene" uid="uid://8rbt5lmdrp0s" path="res://scenes/game/camera/camera.tscn" id="3_nj4wd"]
+[ext_resource type="PackedScene" uid="uid://deedu63sld0es" path="res://scenes/game/levels/objects/death/death.tscn" id="3_ry07u"]
+[ext_resource type="PackedScene" uid="uid://brhmupxo2xjim" path="res://scenes/game/levels/objects/change_scene/door_change_scene.tscn" id="4_pjcbj"]
+[ext_resource type="PackedScene" uid="uid://b5qjvfbte4svk" path="res://scenes/game/levels/objects/pickable_object/pickable_object.tscn" id="5_p8ap0"]
+[ext_resource type="PackedScene" uid="uid://c36rtvjb7r5d1" path="res://scenes/game/levels/objects/red_potion/red_potion.tscn" id="6_unof8"]
+[ext_resource type="PackedScene" uid="uid://bo37g7mv4j6pn" path="res://scenes/game/enemy/crabby.tscn" id="7_sm2by"]
+[ext_resource type="PackedScene" uid="uid://bnp6y3fe4kqob" path="res://scenes/game/levels/objects/damage_object/cannon/cannon.tscn" id="8_l1i2i"]
+[ext_resource type="PackedScene" uid="uid://glchvmmfffqa" path="res://scenes/game/levels/areas/bomb_shop/bomb_shop.tscn" id="9_404n3"]
+[ext_resource type="PackedScene" uid="uid://dl8afnvp5w315" path="res://scenes/game/levels/objects/power_up/power_up.tscn" id="13_hfjeu"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fci4i"]
-shader = ExtResource("3_ncgnr")
-shader_parameter/top_sky_color = Vector4(0.3, 0.6, 1, 1)
-shader_parameter/horizon_color = Vector4(0.6, 0.8, 1, 1)
-shader_parameter/bottom_ocean_color = Vector4(0.1, 0.4, 0.7, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h30p1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbg2b"]
+size = Vector2(66, 35)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_3ui7n")
+script = ExtResource("1_cf5ar")
 
 [node name="AmbientSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_14daw")
+stream = ExtResource("2_arf1a")
 autoplay = true
 bus = &"Ambient"
-
-[node name="Background" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_fci4i")
-position = Vector2(-363, -6.00002)
-scale = Vector2(3.74479, 3.76562)
-texture = ExtResource("4_m1q2k")
-
-[node name="Sky" type="Sprite2D" parent="Background"]
-visible = false
-material = SubResource("ShaderMaterial_h30p1")
-position = Vector2(-5.27501e-06, -111.756)
-scale = Vector2(12, 3.21625)
-texture = ExtResource("5_2pxlk")
 
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="AreaNextLevel" type="Area2D" parent="Areas"]
 
-[node name="Death" parent="Areas" instance=ExtResource("9_cywga")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaNextLevel"]
+position = Vector2(300, 123)
+shape = SubResource("RectangleShape2D_vbg2b")
+
+[node name="Death" parent="Areas" instance=ExtResource("3_ry07u")]
 position = Vector2(172, 304)
 
 [node name="Objects" type="Node2D" parent="."]
 position = Vector2(140, 511)
 
-[node name="DoorChangeScene" parent="Objects" instance=ExtResource("14_s551m")]
+[node name="DoorChangeScene" parent="Objects" instance=ExtResource("4_pjcbj")]
 position = Vector2(1380, -70)
 scale = Vector2(0.8, 0.8)
 _path_to_scene = "res://scenes/game/levels/rooms/scene_2/scene_2.tscn"
 
 [node name="Collectibles" type="Node2D" parent="."]
 
-[node name="PickableObject" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(648, 283)
 animation = "gold_coin"
 
-[node name="PickableObject2" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject2" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(684, 280)
 animation = "gold_coin"
 
-[node name="PickableObject3" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject3" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(674, 264)
 animation = "gold_coin"
 
-[node name="PickableObject4" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject4" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(761, 264)
 animation = "gold_coin"
 
-[node name="PickableObject5" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject5" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(783, 264)
 animation = "gold_coin"
 
-[node name="PickableObject6" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject6" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(805, 264)
 animation = "gold_coin"
 
-[node name="PickableObject7" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject7" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(1066, 276)
 animation = "red_diamond"
 
-[node name="PickableObject8" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject8" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(1095, 276)
 animation = "red_diamond"
 
-[node name="PickableObject9" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject9" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(1122, 276)
 animation = "red_diamond"
 
-[node name="RedPotion" parent="Collectibles" instance=ExtResource("17_kilh1")]
+[node name="RedPotion" parent="Collectibles" instance=ExtResource("6_unof8")]
 position = Vector2(702, 277)
 
-[node name="RedPotion2" parent="Collectibles" instance=ExtResource("17_kilh1")]
+[node name="RedPotion2" parent="Collectibles" instance=ExtResource("6_unof8")]
 position = Vector2(856, 229)
 
-[node name="PickableObject11" parent="Collectibles" instance=ExtResource("16_kb8cx")]
+[node name="PickableObject11" parent="Collectibles" instance=ExtResource("5_p8ap0")]
 position = Vector2(136, 453)
 animation = "green_diamond"
 
-[node name="Crabby" parent="." instance=ExtResource("18_530q5")]
+[node name="Crabby" parent="." instance=ExtResource("7_sm2by")]
 position = Vector2(489, 334)
 animation = "run"
 moving_direction = "right"
 
-[node name="Cannon" parent="." instance=ExtResource("19_jyw11")]
+[node name="Cannon" parent="." instance=ExtResource("8_l1i2i")]
 position = Vector2(1500, 236)
 
-[node name="BombShop" parent="." instance=ExtResource("20_nk4sv")]
+[node name="BombShop" parent="." instance=ExtResource("9_404n3")]
 position = Vector2(485, 489)
 
-[node name="MainCharacter" parent="." instance=ExtResource("21_ns83h")]
+[node name="MainCharacter" parent="." instance=ExtResource("2_e4qjl")]
 position = Vector2(139, 512)
 
 [node name="TileMap" type="TileMap" parent="."]
 show_behind_parent = true
-tile_set = ExtResource("22_1o43r")
+tile_set = ExtResource("1_mv2rp")
 rendering_quadrant_size = 32
 format = 2
 layer_0/name = "Terrain"
@@ -133,7 +116,7 @@ layer_0/tile_data = PackedInt32Array(1114115, 65539, 0, 1114116, 65539, 0, 11141
 layer_1/name = "Tree"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Camera2D" parent="." node_paths=PackedStringArray("character") instance=ExtResource("23_yl0mr")]
+[node name="Camera2D" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_nj4wd")]
 position = Vector2(400, 349)
 limit_left = 65
 limit_top = 50
@@ -141,6 +124,6 @@ limit_right = 1540
 limit_bottom = 560
 character = NodePath("../MainCharacter")
 
-[node name="PowerUp" parent="." instance=ExtResource("24_6d5ph")]
+[node name="PowerUp" parent="." instance=ExtResource("13_hfjeu")]
 position = Vector2(184, 453)
 animation = &"green_bottle"

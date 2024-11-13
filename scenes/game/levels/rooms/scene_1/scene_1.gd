@@ -8,7 +8,7 @@ extends Node2D
 
 # Area para siguiente nivel
 @onready var _area_next_level = $Areas/AreaNextLevel
-@onready var character = $MainCharacter
+@onready var character = $MainCharacter/MainCharacterMovement
 
 # Función de inicialización
 func _ready():
