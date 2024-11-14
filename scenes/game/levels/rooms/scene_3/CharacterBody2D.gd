@@ -62,6 +62,6 @@ func play_anim(movement):
 	if dir == "up":
 		anim.flip_h = true
 		if movement == 1:
-			anim.play("Idle_back")
+			anim.play("Back_move")
 		elif movement == 0:
 			anim.play("Idle_back")
