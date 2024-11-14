@@ -1,25 +1,31 @@
-[gd_scene load_steps=41 format=3 uid="uid://ctwfmot3e14wm"]
+[gd_scene load_steps=47 format=3 uid="uid://ctwfmot3e14wm"]
 
 [ext_resource type="Script" path="res://scenes/game/levels/rooms/scene_3/CharacterBody2D.gd" id="1_6yyn3"]
 [ext_resource type="Texture2D" uid="uid://qpb4x87uyrqi" path="res://assets/sprites/movimiento 360/back idl/pixil-frame-0.png" id="1_hib37"]
 [ext_resource type="Texture2D" uid="uid://bbocejw202urq" path="res://assets/sprites/movimiento 360/Front idl/pixil-frame-1.png" id="1_t842a"]
 [ext_resource type="Texture2D" uid="uid://c6ckhco6qyvrk" path="res://assets/sprites/treasure_hunters/pirate_ship/sprites/tilesets/terrain_and_back_wall_(32x32).png" id="1_xhrer"]
+[ext_resource type="Texture2D" uid="uid://byhm72cpiobng" path="res://assets/sprites/movimiento 360/back move/pixil-frame-1.png" id="2_6m43w"]
 [ext_resource type="Texture2D" uid="uid://ccqab78spkxgo" path="res://assets/sprites/movimiento 360/Front idl/pixil-frame-2.png" id="2_77yb8"]
 [ext_resource type="Texture2D" uid="uid://bu665tbfd58ur" path="res://assets/sprites/movimiento 360/Front move/pixil-frame-1.png" id="2_c3w7r"]
 [ext_resource type="Texture2D" uid="uid://tlh5v0shywkp" path="res://assets/sprites/movimiento 360/back idl/pixil-frame-1.png" id="2_lper4"]
 [ext_resource type="Texture2D" uid="uid://cllaeabb6sjqf" path="res://assets/sprites/movimiento 360/Front idl/pixil-frame-3.png" id="3_6tduv"]
 [ext_resource type="Texture2D" uid="uid://4wxv767l877k" path="res://assets/sprites/movimiento 360/back idl/pixil-frame-2.png" id="3_hgm8y"]
+[ext_resource type="Texture2D" uid="uid://b52u66m0kely6" path="res://assets/sprites/movimiento 360/back move/pixil-frame-2.png" id="3_tmjla"]
 [ext_resource type="Texture2D" uid="uid://eqjoaxwb7cl8" path="res://assets/sprites/movimiento 360/Front move/pixil-frame-2.png" id="3_wqykp"]
+[ext_resource type="Texture2D" uid="uid://coclrbpakridq" path="res://assets/sprites/movimiento 360/back move/pixil-frame-3.png" id="4_1o7ec"]
 [ext_resource type="Texture2D" uid="uid://r2l6wyupdl2h" path="res://assets/sprites/movimiento 360/back idl/pixil-frame-3.png" id="4_debdg"]
 [ext_resource type="Texture2D" uid="uid://bhxh5w8m1kqq3" path="res://assets/sprites/movimiento 360/Front move/pixil-frame-3.png" id="4_f1cfc"]
 [ext_resource type="Texture2D" uid="uid://bvqulnptsgfud" path="res://assets/sprites/movimiento 360/Front idl/pixil-frame-4.png" id="4_okunl"]
 [ext_resource type="Texture2D" uid="uid://o5a32wrjvdua" path="res://assets/sprites/movimiento 360/Front idl/pixil-frame-5.png" id="5_4d65s"]
 [ext_resource type="Texture2D" uid="uid://c62au8ra3ogqy" path="res://assets/sprites/movimiento 360/back idl/pixil-frame-4.png" id="5_k5b5k"]
 [ext_resource type="Texture2D" uid="uid://b7r1na2ei6fjo" path="res://assets/sprites/movimiento 360/Front move/pixil-frame-4.png" id="5_kfany"]
+[ext_resource type="Texture2D" uid="uid://cd2oh5vs5j7bq" path="res://assets/sprites/movimiento 360/back move/pixil-frame-4.png" id="5_tiphh"]
 [ext_resource type="Texture2D" uid="uid://b4xywv1xbo3w3" path="res://assets/sprites/movimiento 360/back idl/pixil-frame-5.png" id="6_cvs1w"]
 [ext_resource type="Texture2D" uid="uid://dx2lsvixhkl6c" path="res://assets/sprites/movimiento 360/Front move/pixil-frame-5.png" id="6_mrwr6"]
+[ext_resource type="Texture2D" uid="uid://8aictg3ivdo1" path="res://assets/sprites/movimiento 360/back move/pixil-frame-5.png" id="6_xbly8"]
 [ext_resource type="Texture2D" uid="uid://ccreawvn18tj5" path="res://assets/sprites/movimiento 360/back idl left/pixil-frame-0.png" id="7_0dehs"]
 [ext_resource type="Texture2D" uid="uid://6xlmmu8d1mge" path="res://assets/sprites/movimiento 360/Front move/pixil-frame-6.png" id="7_godlk"]
+[ext_resource type="Texture2D" uid="uid://b0n8bly4jknbe" path="res://assets/sprites/movimiento 360/back move/pixil-frame-6.png" id="7_xgkws"]
 [ext_resource type="Texture2D" uid="uid://cso5hy54d6rhb" path="res://assets/sprites/movimiento 360/back idl left/pixil-frame-1.png" id="8_oo4hm"]
 [ext_resource type="Texture2D" uid="uid://dqfd2ie2b5gt8" path="res://assets/sprites/movimiento 360/back idl left/pixil-frame-2.png" id="9_dcbpj"]
 [ext_resource type="Texture2D" uid="uid://difx1aj67adv7" path="res://assets/sprites/movimiento 360/back idl left/pixil-frame-3.png" id="10_g6drv"]
@@ -38,6 +44,29 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rwg6u"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6m43w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tmjla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1o7ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tiphh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xbly8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xgkws")
+}],
+"loop": true,
+"name": &"Back_move",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_c3w7r")
@@ -570,7 +599,8 @@ texture_filter = 1
 position = Vector2(5.68434e-14, -5)
 scale = Vector2(0.9125, 0.9125)
 sprite_frames = SubResource("SpriteFrames_rwg6u")
-animation = &"Front_move"
+animation = &"Back_move"
+frame_progress = 0.853441
 script = SubResource("GDScript_ad6ys")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
