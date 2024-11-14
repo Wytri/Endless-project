@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci06f0xwg5wyl"
-path="res://.godot/imported/pixil-frame-0 (3).png-48d66d7484332dc1d0f34ce4a864ced0.ctex"
+uid="uid://6xlmmu8d1mge"
+path="res://.godot/imported/pixil-frame-6.png-8f3905c2b90c85cc54f640b20f15e412.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/RogueLike/Pirata/idl front/pixil-frame-0 (3).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (3).png-48d66d7484332dc1d0f34ce4a864ced0.ctex"]
+source_file="res://assets/sprites/movimiento 360/Front move/pixil-frame-6.png"
+dest_files=["res://.godot/imported/pixil-frame-6.png-8f3905c2b90c85cc54f640b20f15e412.ctex"]
 
 [params]
 

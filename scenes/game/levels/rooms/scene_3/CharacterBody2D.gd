@@ -56,7 +56,7 @@ func play_anim(movement):
 	if dir == "down":
 		anim.flip_h = true
 		if movement == 1:
-			anim.play("Idle_front")
+			anim.play("Front_move")
 		elif movement == 0:
 			anim.play("Idle_front")
 	if dir == "up":
